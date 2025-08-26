@@ -2,6 +2,11 @@ name: build_test_deploy
 
 on: push
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,10 +38,10 @@ jobs:
   deploy:
     needs: test
     
-    permissions:
-        contents: write
-        packages: write
-        id-token: write
+# permissions:
+#     contents: write
+#     packages: write
+#     id-token: write
 
     environment:
       name: Testing
