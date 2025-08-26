@@ -4,10 +4,10 @@ on: push
 
 jobs:
   build:
-    runs-on: ububtu-latest
+    runs-on: ubuntu-latest
     
     steps:
-      - name: checkout code
+      - name: checkout repo
         uses: actions/checkout@v4
       - name: use node.js
         uses: actions/setup-node@v4
